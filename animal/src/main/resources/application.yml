@@ -1,0 +1,27 @@
+spring:
+  h2:
+    console:
+      enabled: true  # H2 웹 콘솔을 사용하겠다는 의미
+      path: /test_db  # 콘솔의 경로
+
+  datasource:
+    driver-class-name: org.h2.Driver  #h2 드라이버 설정
+    url: jdbc:h2:tcp://localhost/~/pentaCats  #접속 URL
+    username: sa  # 사용자 이름 (로그인 시 사용)
+    password:   # 사용자 암호 (로그인 시 사용)
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+
+mybatis:
+  configuration:
+    multiple-result-sets-enabled: false
+    map-underscore-to-camel-case: true
+    all-setters-on-nulls: true
+    jdbc-type-for-null: varchar
+    mapper-locations:  classpath:/mapper/**/*.xml
