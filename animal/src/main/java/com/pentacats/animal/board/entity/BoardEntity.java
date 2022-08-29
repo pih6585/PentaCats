@@ -2,11 +2,14 @@ package com.pentacats.animal.board.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.ColumnDefault;
 
 import lombok.Data;
 
@@ -19,12 +22,17 @@ public class BoardEntity implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
+	@Column(length = 30, nullable = false)
 	private String email;
 
+	@Column(length = 10)
 	private String boardType;
 
+	@Column(length = 20, nullable = false)
 	private String boardName;
 
+	@Column(length = 10)
+	@ColumnDefault("'Y'")
 	private String useYn;
 
 
