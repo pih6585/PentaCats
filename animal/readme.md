@@ -18,3 +18,5 @@
 #### config utils - 채워넣기 (일한)
 
 #### jira, devOps
+#### ci, cd, tdd, ddd(jpa)
+#### 무료버전 : aws - git 배포, jenkins, heroku, docker
