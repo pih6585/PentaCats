@@ -16,3 +16,5 @@
 #### keyClock resttemplate api 
 #### 네이버, 구글, 카카오 api 직접 연동 - 개인정보 권한 동의에 따라 받아올수 있는 항목이 다르다.
 #### config utils - 채워넣기 (일한)
+
+#### jira, devOps
